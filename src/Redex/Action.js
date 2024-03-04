@@ -9,6 +9,7 @@ import {
   REMOVE_PRODUCT,
   SIGNUP,
   SINGLE_PRODUCT,
+  UPDATE_PRODUCT,
 } from "./Actiontype";
 
 export const signup = (data) => {
@@ -76,6 +77,14 @@ export const deleteCart = (id) => async (dispatch) => {
   let res = await axios.delete(`http://localhost:8090/cart/${id}`);
   dispatch({
     type: REMOVE_PRODUCT,
+    payload: id,
+  });
+ 
+};
+export const UpadateCart = (id) => async (dispatch) => {
+  let res = await axios.put(`http://localhost:8090/cart/${id}`);
+  dispatch({
+    type: UPDATE_PRODUCT,
     payload: id,
   });
 };

@@ -27,6 +27,8 @@ const SinglePage = () => {
       <p>{data.single_product.title}</p>
       <p>{data.single_product.price}</p>
       <button onClick={handleCart}>ADD TO CART</button>
+      <button onClick={handleCart}>ROMOVE</button>
+      <button onClick={handleCart}>UPDATE</button>
     </div>
   );
 };

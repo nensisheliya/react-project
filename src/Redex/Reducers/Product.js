@@ -1,4 +1,4 @@
-import { ADD_CART, ADD_PRODUCT, GET_CART, GET_PRODUCT, REMOVE_PRODUCT, SINGLE_PRODUCT } from "../Actiontype";
+import { ADD_CART, ADD_PRODUCT, GET_CART, GET_PRODUCT, REMOVE_PRODUCT, SINGLE_PRODUCT, UPDATE_PRODUCT } from "../Actiontype";
 
 let initialState = {
   product: [],
@@ -38,6 +38,11 @@ export const Product = (state = initialState, { type, payload }) => {
   
   
         case REMOVE_PRODUCT:
+          return {
+            ...state,
+            cart:state.cart.filter((ele)=>ele.id !==payload)
+          }
+          case UPDATE_PRODUCT:
           return {
             ...state,
             cart:state.cart.filter((ele)=>ele.id !==payload)

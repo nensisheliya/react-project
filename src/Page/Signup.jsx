@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signup } from "../Redex/Action";
-import { Emailsignup, GoogleAuth } from "../Config";
-import { addDoc, collection } from "firebase/firestore";
 
 
 const Signup = () => {
@@ -17,33 +15,8 @@ const Signup = () => {
     dispatch(signup(user.data));
   };
 
-  const handleGoogleAuth = () => {
-    // GoogleAuth
-    // GoogleAuth().then((data)=>{
-    //   console.log(data);
-    // });
+ 
 
-    // signup
-    Emailsignup("email@gmail.com","password").then((data)=>{
-      console.log(data);
-    });
-
-     // email Login
-
-    //  EmailLogin("email@gmail.com","password").then((data)=>{
-    //   console.log(data);
-    //  })
-  };
-    
-//   const handleUser =async()=>{
-//  let dbs = collection("users");
-
-//  let user ={
-//   email:"email@gmail.com",
-//   password:"46462",
-//  };
-//  await addDoc(dbs,user);
-//   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -79,8 +52,7 @@ const Signup = () => {
         <input type="submit" />
         
       </form>
-      <button onClick={handleGoogleAuth
-      }>Google</button>
+      
     </div>
   );
 };

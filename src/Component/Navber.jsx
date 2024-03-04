@@ -14,8 +14,8 @@ const Navbar=()=> {
 
   return (
     <div id="nav">
-      <Link  className="link">HANDTIME</Link>
-      <Link to="/" className="link">
+      <Link  className="link">Entro</Link>
+      <Link to="/"className="link">
         Home
       </Link>
       <Link to="/Product" className="link">
